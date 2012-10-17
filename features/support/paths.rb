@@ -15,6 +15,13 @@ module NavigationHelpers
 
     when /the login\s?page/
         '/auth/developer'
+
+    when /create event\s?page/
+        '/new'
+
+    when /event list page/
+        '/events'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

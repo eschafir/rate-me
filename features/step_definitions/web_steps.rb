@@ -7,6 +7,8 @@
 
 require 'uri'
 require 'cgi'
+require File.expand_path(File.join(File.dirname(__FILE__), "../..", "application.rb"))
+
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
 module WithinHelpers
@@ -226,8 +228,19 @@ Then /^I should see "Hello, world!$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Given /^I am in home page$/ do
+Given /^I am in the home page$/ do
   visit '/'
 end
 
+When /^I enter "([^"]*)" in "([^"]*)" box$/ do |arg1, arg2|
+  pending # express the regexp above with the code you wish you had
+end
+
+Given /^the "([^"]*)" exists for "([^"]*)"$/ do |event_name, date|
+   event = Event.new
+   event.name = event_name
+   event.date = Date.parse(date)
+   event.user = "some"
+   event.save
+end
 
