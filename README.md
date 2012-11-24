@@ -13,3 +13,6 @@ rate-me
 #. exec: bundle exec unicorn (start the web server)
 #. open browser an run the application
 
+#. Install heroku toolbelt (https://toolbelt.heroku.com/)
+#. Create heroku app (heroku apps:create application_name)
+
