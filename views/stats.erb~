@@ -1,0 +1,19 @@
+Here you can see the stadistics of the event: <%= @name %>
+<br>
+<br>
+<TABLE BORDER="0"> 
+   <TR>
+    <TH> Positive</TH>
+    <TH> Neutral </TH>
+    <TH> Negative </TH> 
+   </TR>
+
+   <TR>
+    <TH> <%=@positive%></TH>
+    <TH> <%=@neutral %> </TH>
+    <TH> <%= @negative %> </TH>
+   </TR> 
+</TABLE>
+<br>
+<a href="/events">Back</a>
+<a href="/">close session</a>

@@ -1,0 +1,18 @@
+FECHA DE CIERRE: 30/11/12
+
+Como orador quiero obtener el enlace del evento para compartir y recibir feedback
+	- Escribir feature (20 mins)
+	- Escribir código ( 4 hs)
+	
+Como orador quiero ver resultados por evento para tener una estadística.
+	-Escribir feature (20 mins)
+	-Escribir código (4 hs)
+
+Como product owner del proyecto quiero ver la aplicacion corriendo en  heroku. (2hs)
+	- Alta de usuario (5 mins)
+	- Configuracion necesaria para levantar servicio (2 hs)
+
+Como product owner del proyecto quiero registrar dominio (1 hs)
+
+Como product owner del proyecto quiero configurar DNS (30 mins)
+		

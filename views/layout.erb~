@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+	<body background="http://www.tutorialesenlaweb.com/wp-content/download/photoshop/retro/textura_papel.jpg" bgcolor="FFCECB">
+        <h1><span style="color:#fff0f5;">Rate me!</span></h1>        
+        	<%= yield %>
+
+    </body>
+
+</html>

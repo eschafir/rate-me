@@ -1,7 +1,11 @@
+<body>
 <ul>
 <% @list.each do | event | %>
 
-   <li><%= event.name%> </li>
-
+   <li><%= event.name%> &nbsp&nbsp<a href="/event/<%= event.id%>/rate"> Link to rate </a> &nbsp&nbsp<a href="/event/<%= event.id%>/stats"> View Statics </a> &nbsp&nbsp<a href="/event/<%= event.id%>/comments"> Comments </a></li> 
+   
 <%end%>
+<br>
+<a href="/main" >Back</a>
 </ul>
+</body>

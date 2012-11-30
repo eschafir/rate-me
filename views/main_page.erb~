@@ -1,0 +1,14 @@
+Hello  <%=session[:user] %> 
+
+<ul>
+
+<li> <a href="/new" class="boton"> Create an event</a> </li></br>
+<li> <a href="/events" class="boton" > View my events </a> </li>
+
+</ul>
+
+<br>
+<br>
+<a href="/log_in" >Log out</a>
+
+

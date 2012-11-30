@@ -220,12 +220,25 @@ Then /^show me the page$/ do
   save_and_open_page
 end
 
+Then /^I should see "([^"]*)" page$/ do |arg1|
+  visit '/'+arg1
+end
+
+And /^the system should show comments of "([^"]*)"$/ do |event_name|
+  @event_id = Event.find_by_name(event_name).id
+  @list = Score.find_all_by_event_id(@event_id)
+end
+
 Given /^I am viewing "([^"]*)"$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 
 Then /^I should see "Hello, world!$/ do
   pending # express the regexp above with the code you wish you had
+end
+
+Then /^I see "([^"]*)"$/ do |event_name|
+  event_name
 end
 
 Given /^I am in the home page$/ do
@@ -236,11 +249,47 @@ When /^I enter "([^"]*)" in "([^"]*)" box$/ do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
 end
 
+When /^I press "([^"]*)" of an "([^"]*)"$/ do |arg1, event|
+   @event_id = Event.find_by_name(event).id.to_s()
+   visit ('/event/' <<@event_id<< '/stats')
+end
+
 Given /^the "([^"]*)" exists for "([^"]*)"$/ do |event_name, date|
    event = Event.new
    event.name = event_name
    event.date = Date.parse(date)
    event.user = "some"
    event.save
+end
+
+Given /^I am in the event "([^"]*)" rate page$/ do |arg1|
+  url='/event/'+arg1+'/rate'
+  visit url
+end
+
+Given /^The username "([^"]*)" with password "([^"]*)" exists$/ do |arg1, arg2|
+  user = User.new
+  user.name = "Esteban"
+  user.username = arg1
+  user.password = arg2
+  user.email = "esteban.schafir@gmail.com"
+  user.save
+end
+
+Given /^I am in the log in page$/ do
+  visit '/log_in'
+end
+
+Given /^I am in the sign in page$/ do
+  visit '/sign_in'
+end
+
+Given /^The "([^"]*)" account already exists$/ do |arg1|
+  user = User.new
+  user.name = "Esteban"
+  user.username = arg1
+  user.password = ""
+  user.email = "esteban.schafir@gmail.com"
+  user.save
 end
 

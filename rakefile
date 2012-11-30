@@ -14,5 +14,3 @@ task :features do
 end
 
 task :default => [:features]
-
-

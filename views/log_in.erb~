@@ -1,0 +1,14 @@
+<body>
+<form method="post" action="login">
+<h2>Log in</h2>
+                    
+</br>Username:<input class="textbox" type="text" name="username" /></br>
+
+</br>Password:<input class="textbox" type="password" name="password" /></br>
+
+</br><input class="boton" type="submit" value="Log in"/></br>
+
+</br>If you don't have an account, you can sign in<a href="/sign_in">here</a>
+
+</form>
+</body>

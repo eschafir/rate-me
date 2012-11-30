@@ -1,0 +1,15 @@
+User Stories:
+
+Como orador quiero poder registrarme para poder iniciar sesión.	
+Como orador quiero poder hacer login para poder usar la aplicación.
+Como orador quiero poder crear un evento para poder recibir feedback.	
+Como asistente quiero calificar el evento para darle feedback al orador.
+Como orador quiero obtener el enlace del evento para compartir y recibir feedback 
+Como orador quiero ver resultados por evento para tener una estadística.
+Como orador quiero poder borrar eventos.
+Como asistente quiero comentar mi calificación para dar mas detalle de la misma.
+Como orador quiero poder recuperar la clave en caso de perderla.	
+Como orador quiero poder buscar eventos para ver sus estadísticas.	
+Como orador quiero poder actualizar los datos del evento en caso de que haya cambios.	
+Como orador quiero poder modificar enlace para que sea legible.	
+Como orador quiero poder ver las calificaciones históricas globales (todos los +, = y -).	

@@ -1,0 +1,8 @@
+Feature: As a speaker I want to see the results of the event to have a statistics.
+Scenario: access to an event’s statistics
+
+	Given I am on event list page
+	Given the "event 1" exists for "2012-10-10"
+	When I press "View comments" of an "event 1"
+        Then I am on the view comments page
+	Then the system should show comments of "event 1"  

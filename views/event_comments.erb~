@@ -1,0 +1,24 @@
+<table>
+<td>
+<h3><font color = "black"> <%= @name %>  </font></h3></br>
+  
+  <TABLE BORDER="0,8"> 
+     <tr>
+         <TH> Score </TH>
+         <TH> Comment </TH>
+     </tr>
+    <ul>
+  
+    <% @list.each do | score | %>
+     <tr>
+         <TD> <%= score.rate %> </TD>
+         <TD> <%= score.comment %> </TD>
+     </tr>
+  <%end%>
+   </ul>
+  </TABLE>
+ 
+ <hr/> 
+ <a href="/main">Back</a>
+</td>
+</table>
