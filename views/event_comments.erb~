@@ -2,7 +2,7 @@
 <td>
 <h3><font color = "black"> <%= @name %>  </font></h3></br>
   
-  <TABLE BORDER="0,8"> 
+  <TABLE BORDER="1"> 
      <tr>
          <TH> Score </TH>
          <TH> Comment </TH>
