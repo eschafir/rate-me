@@ -2,7 +2,7 @@
 <ul>
 <% @list.each do | event | %>
 
-   <li><%= event.name%> &nbsp&nbsp<a href="/event/<%= event.id%>/rate"> Link to rate </a> &nbsp&nbsp<a href="/event/<%= event.id%>/stats"> View Statics </a> &nbsp&nbsp<a href="/event/<%= event.id%>/comments"> Comments </a> &nbsp&nbsp<form method="post" action="/event/<%= event.id %>/event_deleted"><a href="/event/<%= event.id%>/event_deleted"> Delete </a></form></li> <br><br>
+   <li><%= event.name%> &nbsp&nbsp<a href="/event/<%= event.id%>/rate"> Link to rate </a> &nbsp&nbsp<a href="/event/<%= event.id%>/stats"> View Statics </a> &nbsp&nbsp<a href="/event/<%= event.id%>/comments"> Comments </a> &nbsp&nbsp<method="post" action="/event/<%= event.id %>/event_deleted"><a href="/event/<%= event.id%>/event_deleted"> Delete </a></li> <br><br>
 
 <%end%>
 <br>

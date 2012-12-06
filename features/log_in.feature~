@@ -9,7 +9,7 @@ Scenario: Successful access to the application
 	And I fill in "username" with "user0_username"
 	And I fill in "password" with "password"
 	When I press "Log in" 
-	Then I should see "Main" 
+	Then I should see "Hello" 
 
 Scenario: Incorrect Password
 

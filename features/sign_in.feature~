@@ -13,9 +13,9 @@ Scenario: Successful creation of an account (happy path)
 Scenario: Failed creation of the duplicated user account
 
 	Given I am in the sign in page
-	And The "user0" account already exists
-	And I fill in "name" with "user0"
-	And I fill in "username" with "user0_username"
+	And The "esteban" account already exists
+	And I fill in "name" with "Esteban"
+	And I fill in "username" with "esteban"
 	And I fill in "email" with "user0@unq.com"
 	And I fill in "password" with "password"
 	When I press "Continue" 

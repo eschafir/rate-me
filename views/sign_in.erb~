@@ -21,7 +21,7 @@ function checkEmail() {
 
 </br>Username:<input class="textbox" type="text" name="username" /></br>
 
-</br>Email:<input class="textbox" type="text" name="email"  /></br>
+</br>Email:<input class="textbox" type="text" name="email" id="email" /></br>
 
 </br>Password:<input class="textbox" type="password" name="password" /></br>
 

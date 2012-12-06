@@ -1,0 +1,20 @@
+<table align="center">
+<td>
+  <h2><font color ="green"> Rate this event:<%= @event %> </font></h2>
+  <form method="post" action="rate" >
+  
+    <input type="radio" id="Awfully good" name="option" value="awfully good" /> Awfully good</br>
+    <input type="radio" id="Just nice" name="option" value="nice" />Just nice</br>
+    <input type="radio" id ="I didn't like" name="option" value="I did not like" />I didn't like</br></br>
+
+    Enter your comments:<br /><textarea name="comments" rows="4" cols="30">...Your comments here...</textarea></br>
+
+ <input type="hidden" name = "id" value="<%= @id_Event %>" />
+ 
+ <input type="submit" value="Send"/></br>
+
+<b><font color = "red"> <%= @message %> </font></b>
+  
+  </form>
+</td>
+</table>

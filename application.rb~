@@ -96,12 +96,16 @@ class MyApplication < Sinatra::Base
   end
 
   post '/event/:id/rate' do
-       type_rate = params[:score]
+       rate = params[:score]
        id= params[:id]
        score = Score.new
        score.event_id = id
-       score.rate = type_rate
-       score.comment = params[:comments]
+       score.rate = rate
+       if params[:comments] != ""
+         score.comment = params[:comments]
+       else
+         score.comment = "No comments"
+       end
        score.save!
        @message="Your score was sent. Thanks!"
        erb :score_sent
@@ -120,8 +124,8 @@ class MyApplication < Sinatra::Base
     erb:log_in
   end
 
-  get '/main' do 
-	erb :main_page
+  get '/main' do
+     erb :main_page
   end
 
   post '/main' do
@@ -133,10 +137,32 @@ class MyApplication < Sinatra::Base
          end
       end
       if existe
-         then erb :error_username_exists
+         erb :error_username_exists
       else
            user = User.new
-                  user.name = params[:name]
+           user.name = params[:name]
+           user.username = params[:username]
+           user.password = params[:password]
+           user.email = params[:email]
+           user.save
+           session[:user] = params[:username]
+           erb :main_page  
+      end
+  end
+
+ post '/sign_in' do
+      existe = false
+      users = User.all
+      users.each do |user|
+         if user.username == params[:username]
+            then existe = true
+         end
+      end
+      if existe
+         erb :error_username_exists
+      else
+           user = User.new
+           user.name = params[:name]
            user.username = params[:username]
            user.password = params[:password]
            user.email = params[:email]

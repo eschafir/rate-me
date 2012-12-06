@@ -22,6 +22,11 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
+Given /^I am in the "([^"]*)" rate page$/ do |arg1|
+  @event_id = Event.find_by_name(arg1).id.to_s()
+   visit ('/event/' <<@event_id<< '/rate')
+end
+
 When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -31,6 +36,12 @@ When /^(?:|I )press "([^\"]*)"(?: within "([^\"]*)")?$/ do |button, selector|
     click_button(button)
   end
 end
+
+When /^I press the Delete button of the event "([^"]*)"$/ do |arg1|
+   @event_id = Event.find_by_name(arg1).id.to_s()
+   visit ('/event/' <<@event_id<< '/event_deleted')
+end
+
 
 When /^(?:|I )follow "([^\"]*)"(?: within "([^\"]*)")?$/ do |link, selector|
   with_scope(selector) do

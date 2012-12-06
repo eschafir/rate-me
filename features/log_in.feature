@@ -1,6 +1,4 @@
-Feature: As a speaker I want to Log in to use the application
-
-	
+Feature: As a speaker I want to Log in to use the application	
 
 Scenario: Successful access to the application
 
